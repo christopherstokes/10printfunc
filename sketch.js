@@ -1,5 +1,6 @@
 let x=0, y=0;
 let spacing=10;
+let strokeColor=255;
 
 function setup() {
 	createCanvas(windowWidth, windowHeight);
@@ -7,7 +8,8 @@ function setup() {
 }
 
 function draw() {
-	stroke(255)
+	strokeColor=color(random(255),random(255),random(255))
+	stroke(strokeColor)
 
 	if (random(1) < 0.5) line(x, y, x+spacing, y+spacing);
 	else line(x, y+spacing, x+spacing, y)
@@ -18,7 +20,6 @@ function draw() {
 		y += spacing;
 	}
 	if (y > height) {
-		background(0);
 		x = 0;
 		y = 0;
 	}
