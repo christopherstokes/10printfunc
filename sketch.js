@@ -1,5 +1,5 @@
 let x=0, y=0;
-let spacing=10;
+let spacing=40;
 let strokeColor=255;
 
 function setup() {
